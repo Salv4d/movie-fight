@@ -15,8 +15,9 @@
     <script src="https://unpkg.com/mocha/mocha.js"></script>
 
     <script class="mocha-init">
-      mocha.setup('bdd');
+      mocha.setup("bdd");
       mocha.checkLeaks();
+      const expect = chai.expect;
     </script>
     <script src="../utils.js"></script>
     <script src="../autocomplete.js"></script>
