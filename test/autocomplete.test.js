@@ -1,15 +1,17 @@
-it('Show autocomplete', () => {
-    createAutoComplete({
-        root: document.querySelector('#target'),
-        fetchData() {
-            return [
-                { Title: 'Avengers' },
-                { Title: 'Batman' },
-                { Title: 'Justice League' }
-            ]
-        }
-    }), 
+it("Show autocomplete", () => {
+  createAutoComplete({
+    root: document.querySelector("#target"),
+    fetchData() {
+      return [
+        { Title: "Avengers" },
+        { Title: "Justice League" },
+        { Title: "A Clockwork Orange" },
+      ];
+    },
     renderOption(movie) {
-        return movie.Title
-    }
-})
+      return movie.Title;
+    },
+  });
+
+  const dropdown = document.querySelector(".dropdown");
+});
