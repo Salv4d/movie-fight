@@ -51,3 +51,17 @@ it("After searching, dropdown open up", async () => {
   const dropdown = document.querySelector(".dropdown");
   expect(dropdown.className).to.include("is-active");
 });
+
+it("After searching, displays results", async () => {
+  const input = document.querySelector("input");
+
+  input.value = "Justice League";
+
+  input.dispatchEvent(new Event("input"));
+
+  await waitFor(".dropdown-item");
+
+  const items = document.querySelectorAll(".dropdown-item");
+
+  expect(items.length).to.equal(3);
+});
